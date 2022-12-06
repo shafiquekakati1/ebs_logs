@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ebs_logs
+  namespace: d1-pr-vfom-smtp
+spec:
+  selector:
+    matchLabels:
+      app: ebs_logs
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: ebs_logs
+    spec:
+     containers:
+      - name: ebs_logs
+        image: >-
+          prodgitlab.vodafone.om:5050/shafique.kakati1/smspushpull
+        resources:
+          limits:
+            cpu: 100m
+            memory: 200Mi
+          requests:
+            cpu: 100m
+            memory: 200Mi
