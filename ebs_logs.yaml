@@ -20,7 +20,7 @@ spec:
      containers:
       - name: ebs_logs
         image: >-
-          prodgitlab.vodafone.om:5050/shafique.kakati1/smspushpull
+          prodgitlab.vodafone.om:5050/shafique.kakati1/ebs_logs
         resources:
           limits:
             cpu: 100m
