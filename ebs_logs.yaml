@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ebs_logs
+  name: ebs-logs
   namespace: d1-pr-vfom-smtp
 spec:
   selector:
     matchLabels:
-      app: ebs_logs
+      app: ebs-logs
   replicas: 1
   template:
     metadata:
       labels:
-        app: ebs_logs
+        app: ebs-logs
     spec:
      volumes:
         - name: shafique
           persistentVolumeClaim:
             claimName: shafique
      containers:
-      - name: ebs_logs
+      - name: ebs-logs
         image: >-
           prodgitlab.vodafone.om:5050/shafique.kakati1/ebs_logs
         resources:

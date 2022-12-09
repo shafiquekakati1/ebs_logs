@@ -8,7 +8,7 @@ pipeline {
                     sh '''
                     oc login "https://api.rhocp.prod-cloud1.itcloud.local.vodafone.om:6443" -u "$userNameVar" -p "$userPassVar" --insecure-skip-tls-verify
                                         oc project d1-pr-vfom-smtp
-                    oc delete deployment ebs_logs -n d1-pr-vfom-smtp
+                    oc delete deployment ebs-logs -n d1-pr-vfom-smtp
                     '''
                  }
             }
